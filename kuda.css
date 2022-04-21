@@ -228,10 +228,130 @@ margin-left: auto;
     display: flex;
     flex-direction: row;
 }
+/*mainheading*/
+
 .mainheading{
     margin-bottom: 40px;
 }
+.mainword{
+    display: flex;
+    flex:0 0 35%;
+    flex-direction: column;
+}
+.mainpix{
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: center;
+    position: relative;
+    left: 10%;
+    
+}
+.bigcircle{
+    width:450px;
+    height: 450px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    
+}
+.mediumcircle{
+    width:350px;
+    height: 350px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    position: absolute;
+    left: 31.5%;
+    top: 11.5%;
+}
+.sv1{
+    position: relative;
+    top:200px;
+    animation: sv1 6s infinite linear;
+}
+.sv2{
+    position: relative;
+    animation:  sv2 6s infinite linear;
+    top:200px;
+}
+.sv3{
+    position: relative;
+    animation:  sv3 6s infinite linear;
+    top:40px;
+}
+.sv4{
+    position: relative;
+    animation:  sv4 6s infinite linear;
+    top:150px;
+}
+.sv5{
+    position: relative;
+    animation:  sv5 6s infinite linear;
+    top:108px;
+}
+/* @keyframe */
+@keyframes sv1{
+    from{
+        transform:rotate(0deg) translateX(-20px)
+    }
+    to{
+        transform:rotate(-360deg) translateX(-20px)
+    }
+}
+@keyframes sv2{
+    0%{
+        transform:rotate(0deg) translateX(-25px)
+    }
+    25%{
+        transform:rotate(90deg) translateX(-65px)
+    }
+   50%{
+    transform:rotate(180deg) translateX(-25px)
+   }
+   75%{
+    transform:rotate(270deg) translateX(30px)
+   }
+   100%{
+    transform:rotate(360deg) translateX(-25px)
+}
+}
+@keyframes sv3{
+    0%{
+        transform:rotate(0deg) translateX(0px)
+    }
+    25%{
+        transform:rotate(090deg)  translateX(65px)
+    }
+   50%{
+    transform:rotate(180deg) translateX(5px)
+   }
+   75%{
+    transform:rotate(270deg) translateX(-125px)
+   }
+   100%{
+    transform:rotate(360deg) translateX(0px)
+}
+}
+@keyframes sv4{
+    from{
+        transform:rotate(0deg) translateX(-20px)
+    }
+    to{
+        transform:rotate(360deg) translateX(-20px)
+    }
+}
+@keyframes sv5{
+    from{
+        transform:rotate(0deg) translateX(-20px)
+    }
+    to{
+        transform:rotate(-360deg) translateX(-20px)
+    }
+}
 /*smallbox*/ 
+.smallbox{
+    margin-top: 180px;
+}
 .box{
     display: flex;
     flex:33.333%;
@@ -508,7 +628,8 @@ margin-left: auto;
 }
 /*partnership*/
 .partnership{
-    
+    width: 100%;
+    max-width: 100%;
     padding-top: 8%;
     padding-bottom: 7%;
     background: #fbfbfb;
@@ -520,7 +641,7 @@ margin-left: auto;
 }
 .partnerimg{
     display: flex;
-    flex:100%;
+    flex:0 0 100%;
 }
 .partnerimg img{
     flex: 0 0 20%;
@@ -566,6 +687,9 @@ margin-left: auto;
 }
 .check-icon{
     margin-right: 2%;
+}
+.emtyhead{
+    color:  var(--primaryColor);
 }
 /*app*/
 .app{
@@ -640,7 +764,184 @@ ul{
     font-size: 12;
 }
 @media only screen and (max-width:480px) {
- .navigation, .signbtn{
+ /*navbar*/
+ .c-menu .menu-btn{
+    display: none;
+}
+ .c-menu .menu-icon{
+    float: right;
+     position: relative;
+     padding:15px;
+     cursor: pointer;
+     margin-left: 25%;
+     padding-left:230px;
+     padding-top: 45px;
+ }
+ .c-menu .menu-icon .nav-icon{
+     background: transparent;
+     display: block;
+     height: 4px;
+     width: 25px;
+     position:relative;
+     top: -20px;
+     transition: background .2s ease-out;
+ }
+ .c-menu .menu-icon .nav-icon::before{
+    background: #333;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 25px;
+    transition: all .2s ease-out;
+    position:absolute;
+    
+}  .c-menu .menu-icon .nav-icon::after{
+    background: #333;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 25px;
+    transition: all .2s ease-out;
+    position:absolute;
+    top:-10px;
+}
+.c-menu .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+.c-menu .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top:0;
+}
+.c-menu .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+
+
+    .navigation, .signbtn{
      display: none;
  }
+ .row{
+     display: flex;
+     flex-direction: column;
+ }
+ h1{
+     text-align: center;
+ }
+ .header{
+     padding-bottom: 0;
+     padding-top: 0px;
+ }
+ /*publication*/
+ .publicationsect{
+     margin-bottom: 50%;
+ }
+ .publication{
+     max-width: 100% !important;
+     flex-wrap: wrap;
+     padding-left: 30px;
+     padding-right: 30px;
+     
+ }
+ .publication img{
+     flex: 0 0 29%;
+     max-width: 29%;
+     padding-top: 28px;
+ }
+ /*partnership*/
+ .partnerimg{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.partnerimg img{
+    flex: 0 0 50%;
+    max-width: 100px;
+}
+.partnerimg img:nth-child(odd){
+    margin-right: 50px;
+    padding-left: 50px;
+}
+.partnerimg img:nth-child(even){
+    padding-left: 50px;
+}
+.partnerimg img:last-child{
+    margin-left: auto;
+    margin-right: auto;
+}
+.acctpix, .savepix, .helppix {
+   
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: auto;
+}
+.managepix, .safetypix, .feepix {
+    display: flex;
+    flex: 0 0 100%;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2opx;
+    order:2;
+}
+.manageword, .safetyword, .feeword {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    order:1;
+}
+.manage, .safety, .feesect, .acctopen, .savesect, .helpsect{
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+}
+.apppix{
+    display: none;
+}
+.featuredcontain{
+    display: flex;
+    flex:0 0 100%;
+    flex-wrap: wrap;
+    
+}
+.kuda{
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+}
+.feature, .company, .transparency, .help{
+    flex: 0 0 50%;
+    margin-bottom: 40px;
+}
+.feature ul li, .company ul li, .transparency ul li, .help ul li{
+    margin-bottom: 10px;
+}
+.download{
+    display: flex;
+}
+.download img{
+    margin-right: 01.2%;
+}
+.contactinfo .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contact{
+    flex: 0 0 100%;
+}
+.localaddr, .foreignaddr{
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: 50%;
+}
 }
