@@ -228,6 +228,9 @@ margin-left: auto;
     display: flex;
     flex-direction: row;
 }
+.c-menu{
+    display: none;
+}
 /*mainheading*/
 
 .mainheading{
@@ -241,11 +244,9 @@ margin-left: auto;
 .mainpix{
     display: flex;
     flex: 0 0 50%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-content: center;
     position: relative;
-    left: 10%;
+    margin-left: 15%;
+    top:3%;
     
 }
 .bigcircle{
@@ -260,9 +261,18 @@ margin-left: auto;
     height: 350px;
     border: 3px solid #EFF1FF;
     border-radius: 50%;
-    position: absolute;
-    left: 31.5%;
-    top: 11.5%;
+    position: relative;
+    left: 11.5%;
+    top: -17%;
+}
+.smallcircle{
+    width:200px;
+    height: 200px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    position: relative;
+    left: 28%;
+    top:-78%;
 }
 .sv1{
     position: relative;
@@ -277,7 +287,9 @@ margin-left: auto;
 .sv3{
     position: relative;
     animation:  sv3 6s infinite linear;
-    top:40px;
+    top:120px;
+    left: 210px;
+    transform-origin: left;
 }
 .sv4{
     position: relative;
@@ -316,21 +328,21 @@ margin-left: auto;
 }
 }
 @keyframes sv3{
-    0%{
-        transform:rotate(0deg) translateX(0px)
-    }
-    25%{
-        transform:rotate(090deg)  translateX(65px)
-    }
+   0%{
+       transform:rotate(0deg) translateX(225px)
+   }
+   25%{
+       transform: rotate(90deg) translateX(225px)
+   }
    50%{
-    transform:rotate(180deg) translateX(5px)
+    transform: rotate(180deg) translateX(180px)
    }
    75%{
-    transform:rotate(270deg) translateX(-125px)
+    transform: rotate(270deg) translateX(225px)
    }
    100%{
-    transform:rotate(360deg) translateX(0px)
-}
+    transform: rotate(360deg) translateX(225px)
+   }
 }
 @keyframes sv4{
     from{
@@ -347,6 +359,20 @@ margin-left: auto;
     to{
         transform:rotate(-360deg) translateX(-20px)
     }
+}
+.kcard{
+    position: relative;
+    left: -30%;
+    top:20%;
+    transform: rotate(-10deg);
+}
+.p-ill{
+    position: relative;
+    top:-190%;
+    width: 350px;
+    height: 400px;
+    transform: rotate(-6deg);
+    left: -13.7%;
 }
 /*smallbox*/ 
 .smallbox{
@@ -689,7 +715,7 @@ margin-left: auto;
     margin-right: 2%;
 }
 .emtyhead{
-    color:  var(--primaryColor);
+    color:  var(--blackColor);
 }
 /*app*/
 .app{
@@ -763,19 +789,53 @@ ul{
 .fs-12{
     font-size: 12;
 }
-@media only screen and (max-width:480px) {
- /*navbar*/
- .c-menu .menu-btn{
+
+.c-menu .menu-btn{
     display: none;
 }
+
+
+
+
+@media only screen and (max-width:480px) {
+ /*navbar*/
+
+
  .c-menu .menu-icon{
     float: right;
      position: relative;
      padding:15px;
      cursor: pointer;
-     margin-left: 25%;
-     padding-left:230px;
+     left: 220%;
      padding-top: 45px;
+ }
+ .c-menu .flap{
+    float: right;
+    position: relative;
+    background-color: #b0e6d0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-content: center;
+    align-items: center;
+    left:190%;
+    margin-top: 5px ;
+ }
+ .rect{
+     position: relative;
+     width: 20px;
+     height: 20px;
+     background-color: #008751;
+     left: 10px;
+     top:10px
+ }
+ .square{
+    position: relative;
+    width: 5px;
+    height: 20px;
+    background-color: var(--whiteColor);
+    left: 18px;
+    top:-10px;
  }
  .c-menu .menu-icon .nav-icon{
      background: transparent;
@@ -805,6 +865,15 @@ ul{
     position:absolute;
     top:-10px;
 }
+
+.c-menu .menu-btn:checked ~ .flap{
+    
+    visibility: hidden;
+}
+.c-menu .menu-btn:checked ~ .men{
+    max-height: 1000px;
+    display: block !important;
+}
 .c-menu .menu-btn:checked ~ .menu-icon .nav-icon{
     background: transparent;
 }
@@ -819,9 +888,69 @@ ul{
 
 
 
-
+    .flag{
+        display: none;
+    }
     .navigation, .signbtn{
      display: none;
+ }
+ .men{
+     background: var(--whiteColor);
+     width: 100%;
+     max-height: 0;
+     transition: max-height .2s ease-out;
+     display: none !important;
+     transition: display .2s ease-out;
+  
+ }
+ .men ul li{
+     margin-top: 20px;
+     font-size: 14px;
+ }
+ .men  p{
+     color:var(--primaryColor) !important;
+     font-weight: 700;
+     font-size: 1.15rem;
+     }
+ .firstrow{
+     display: flex;
+     height: 40px;
+     margin-left:20px;
+ }
+ .secondrow{
+     display: flex;
+     flex-wrap: wrap;
+     margin-left:20px;
+     color: var(--blackColor);
+     font-size: 1rem;
+ }
+ .ss{
+     position: relative;
+     top: 10px;
+     margin-right: 10px;
+     height: 25px;
+     width: 25px;
+ }
+ .hep, .feat, .comp{
+    flex: 0 0 50%;
+    margin-top: 20px;
+ }
+ .getkuda{
+     font-size: 13px;
+ }
+ .business{
+     background-color: #dfe3ff;
+     color:var(--primaryColor);
+     margin-left: 14px;
+     font-size: 13px;
+
+ }
+ .men{
+     display: block;
+     position: absolute;
+     left: 0;
+     top: 50px;
+     padding-top: 15px;
  }
  .row{
      display: flex;
@@ -829,11 +958,56 @@ ul{
  }
  h1{
      text-align: center;
+     font-size: 2.5rem!important;
+    line-height: 1.33;
  }
  .header{
      padding-bottom: 0;
      padding-top: 0px;
  }
+ .maincontent, footer {
+  
+    padding: 70px 40px 63px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+        max-width: 1180px;
+    }
+    
+ /*mainheading*/
+ .mainword{
+    display: flex;
+    flex:0 0 100%;
+    flex-direction: column;
+}
+.mainpix{
+    display: flex;
+    flex: 0 0 00%;
+    position: relative;
+    margin-left: auto !important;
+    margin-right: auto !important;margin-top: 50px;
+
+    top:3%;
+    
+}
+/*smallbox*/
+.box{
+    padding-right: 0;;
+    margin-top: 20px;
+}
+.co-box2{
+    margin-top:0;
+    display:flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+.box1, .box2, .box3,.box4, .box5{
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
  /*publication*/
  .publicationsect{
      margin-bottom: 50%;
@@ -871,13 +1045,31 @@ ul{
     margin-left: auto;
     margin-right: auto;
 }
+/*freedom*/
+.emtyhead{
+    flex: 0 0 100% !important;
+}
+.o-bankhead, .k-bankhead{
+    display: flex;
+    flex:0 0 50% !important;
+    flex-wrap: nowrap;}
+.freerow .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fr{
+    font-size: .875rem;
+}
+
 .acctpix, .savepix, .helppix {
    
     width: 100%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     height: auto;
 }
 .managepix, .safetypix, .feepix {
@@ -887,7 +1079,7 @@ ul{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2opx;
+    margin-top: 40px;
     order:2;
 }
 .manageword, .safetyword, .feeword {
