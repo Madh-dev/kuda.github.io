@@ -244,9 +244,9 @@ margin-left: auto;
 .mainpix{
     display: flex;
     flex: 0 0 50%;
-    position: relative;
-    margin-left: 15%;
-    top:3%;
+    position: absolute;
+    margin-left: 45%;
+    top:30%;
     
 }
 .bigcircle{
@@ -261,103 +261,94 @@ margin-left: auto;
     height: 350px;
     border: 3px solid #EFF1FF;
     border-radius: 50%;
-    position: relative;
-    left: 11.5%;
-    top: -17%;
+    position: absolute;
+    left:11.35%;
+    top:11%;
 }
 .smallcircle{
     width:200px;
     height: 200px;
     border: 3px solid #EFF1FF;
     border-radius: 50%;
-    position: relative;
-    left: 28%;
-    top:-78%;
+    position: absolute;
+    left:28%;
+    top:29%;
 }
 .sv1{
-    position: relative;
-    top:200px;
+    position: absolute;
+    left:46%;
+    top:45%;
     animation: sv1 6s infinite linear;
 }
 .sv2{
-    position: relative;
+    position: absolute;
+    top:45%;
+    left:45%;
     animation:  sv2 6s infinite linear;
-    top:200px;
+    
 }
 .sv3{
-    position: relative;
+    position: absolute;
+    left:45%;
+    top:45%;
     animation:  sv3 6s infinite linear;
-    top:120px;
-    left: 210px;
-    transform-origin: left;
+    
+    
 }
 .sv4{
-    position: relative;
+    position: absolute;
+    left:45%;
+    top:45%;
     animation:  sv4 6s infinite linear;
-    top:150px;
+   
 }
 .sv5{
-    position: relative;
+    position: absolute;
+    left:45%;
+    top:45%;
     animation:  sv5 6s infinite linear;
-    top:108px;
+    
 }
 /* @keyframe */
 @keyframes sv1{
     from{
-        transform:rotate(0deg) translateX(-20px)
+        transform:rotate(0deg) translateX(230px)
     }
     to{
-        transform:rotate(-360deg) translateX(-20px)
+        transform:rotate(-360deg) translateX(230px)
     }
 }
 @keyframes sv2{
-    0%{
-        transform:rotate(0deg) translateX(-25px)
+    from{
+        transform:rotate(0deg) translateX(230px)
     }
-    25%{
-        transform:rotate(90deg) translateX(-65px)
+    to{
+        transform:rotate(360deg) translateX(230px)
     }
-   50%{
-    transform:rotate(180deg) translateX(-25px)
-   }
-   75%{
-    transform:rotate(270deg) translateX(30px)
-   }
-   100%{
-    transform:rotate(360deg) translateX(-25px)
-}
+   
 }
 @keyframes sv3{
-   0%{
-       transform:rotate(0deg) translateX(225px)
-   }
-   25%{
-       transform: rotate(90deg) translateX(225px)
-   }
-   50%{
-    transform: rotate(180deg) translateX(180px)
-   }
-   75%{
-    transform: rotate(270deg) translateX(225px)
-   }
-   100%{
-    transform: rotate(360deg) translateX(225px)
-   }
+    from{
+        transform:rotate(0deg) translateX(-230px)
+    }
+    to{
+        transform:rotate(360deg) translateX(-230px)
+    }
 }
 @keyframes sv4{
     from{
-        transform:rotate(0deg) translateX(-20px)
+        transform:rotate(0deg) translateY(-175px)
     }
     to{
-        transform:rotate(360deg) translateX(-20px)
+        transform:rotate(360deg) translateY(-175px)
     }
 }
 @keyframes sv5{
     from{
-        transform:rotate(0deg) translateX(-20px)
+        transform:rotate(0deg) translateY(175px)
     }
     to{
-        transform:rotate(-360deg) translateX(-20px)
+        transform:rotate(-360deg) translateY(175px)
     }
 }
 .kcard{
@@ -795,6 +786,436 @@ ul{
 }
 
 
+@media only screen and (max-width:990px){
+    .acctopen .container .row, .manage .container .row, .safety .container .row, .savesect .container .row,
+    .helpsect .container .row, .feesect .container .row
+    {
+        flex-direction: column;
+    }
+    .manageword, .safetyword, .feeword {
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        order:1;
+    }
+    .acctopenword, .saveword, .helpword{
+            display: flex;
+            flex: 0 0 100%;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    .managepix, .safetypix, .feepix {
+        display: flex;
+        flex: 0 0 100%;
+        width: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        order:2;
+        max-width: 50%;
+    }
+    .acctpix, .savepix, .helppix {
+   
+        width: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        height: auto;
+        max-width: 50%;
+    }
+    .apppix{
+        display: none;
+    }
+} 
+
+
+
+@media only screen and (max-width:767px){
+        
+.c-menu{
+    display: block;
+    float: right;
+    margin-left: 50%;
+}
+ .c-menu .menu-icon{
+    float: right;
+     position: relative;
+     padding:15px;
+     cursor: pointer;
+    margin-left: 70px;
+     padding-top: 45px;
+ }
+ .c-menu .flap{
+    float: right;
+    position: absolute;
+    background-color: #b0e6d0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-content: center;
+    align-items: center;
+    right: 70px;
+    margin-top: 5px ;
+ }
+ .rect{
+     position: relative;
+     width: 20px;
+     height: 20px;
+     background-color: #008751;
+     left: 10px;
+     top:10px
+ }
+ .square{
+    position: relative;
+    width: 5px;
+    height: 20px;
+    background-color: var(--whiteColor);
+    left: 18px;
+    top:-10px;
+ }
+ .c-menu .menu-icon .nav-icon{
+     background: transparent;
+     display: block;
+     height: 4px;
+     width: 25px;
+     position:relative;
+     top: -20px;
+     transition: background .2s ease-out;
+ }
+ .c-menu .menu-icon .nav-icon::before{
+    background: #333;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 25px;
+    transition: all .2s ease-out;
+    position:absolute;
+    
+}  .c-menu .menu-icon .nav-icon::after{
+    background: #333;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 25px;
+    transition: all .2s ease-out;
+    position:absolute;
+    top:-10px;
+}
+
+.c-menu .menu-btn:checked ~ .flap{
+    
+    visibility: hidden;
+}
+.c-menu .menu-btn:checked ~ .men{
+    max-height: 1000px;
+    display: block !important;
+}
+.c-menu .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+.c-menu .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top:0;
+}
+.c-menu .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+
+    .flag{
+        display: none;
+    }
+    .navigation, .signbtn{
+     display: none;
+ }
+ .men{
+     background: var(--whiteColor);
+     width: 100%;
+     max-height: 0;
+     transition: max-height .2s ease-out;
+     display: none !important;
+     transition: display .2s ease-out;
+  
+ }
+ .men ul li{
+     margin-top: 20px;
+     font-size: 14px;
+ }
+ .men  p{
+     color:var(--primaryColor) !important;
+     font-weight: 700;
+     font-size: 1.15rem;
+     }
+ .firstrow{
+     display: flex;
+     height: 40px;
+     margin-left:20px;
+ }
+ .secondrow{
+     display: flex;
+     flex-wrap: wrap;
+     margin-left:20px;
+     color: var(--blackColor);
+     font-size: 1rem;
+ }
+ .ss{
+     position: relative;
+     top: 10px;
+     margin-right: 10px;
+     height: 25px;
+     width: 25px;
+ }
+ .hep, .feat, .comp{
+    flex: 0 0 50%;
+    margin-top: 20px;
+ }
+ .getkuda{
+     font-size: 13px;
+ }
+ .business{
+     background-color: #dfe3ff;
+     color:var(--primaryColor);
+     margin-left: 14px;
+     font-size: 13px;
+
+ }
+ .men{
+     display: block;
+     position: absolute;
+     left: 0;
+     top: 50px;
+     padding-top: 15px;
+ }
+ .row{
+     display: flex;
+     flex-direction: column;
+ }
+ .h-text{
+    text-align: center;
+    font-size: 2.5rem!important;
+   line-height: 1.33;
+ }
+ h1{
+     text-align: center;
+     font-size: 2.5rem!important;
+    line-height: 1.33;
+ }
+ .header{
+     padding-bottom: 0;
+     padding-top: 0px;
+ }
+ .maincontent, footer {
+  
+    padding: 70px 20px 63px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+        max-width: 1180px;
+    }
+    
+ /*mainheading*/
+ .mainword{
+    display: flex;
+    flex:0 0 100%;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mainpix{
+    
+    display: flex;
+    flex: 0 0 100%;
+    position: relative;
+    margin-left: auto !important;
+    margin-right: auto !important;margin-top: 50px;
+    top:3%;
+    left:-3%;
+    
+}/*
+
+/*smallbox*/
+.box{
+    max-width: 50% !important;
+  
+    margin-top: 20px;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.box svg{
+    position: relative;
+    top:15px;
+    padding-right: 20px;
+}
+.box p{
+    font-size: .975rem;
+}
+.co-box1{
+    margin-top:0;
+    display:flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+.co-box2{
+    margin-top:0;
+    display:flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+.box1, .box2, .box3,.box4, .box5{
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+ /*publication*/
+ .publicationsect{
+     margin-bottom: 50%;
+ }
+ .publication{
+     max-width: 90% !important;
+     flex-wrap: wrap;
+     padding-left: 30px;
+     padding-right: 30px;
+     
+ }
+ .publication img{
+     flex: 0 0 29%;
+     max-width: 29%;
+     padding-top: 28px;
+ }
+ /*partnership*/
+ .partnerimg{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.partnerimg img{
+    flex: 0 0 50%;
+    max-width: 100px;
+}
+.partnerimg img:nth-child(odd){
+    margin-right: 50px;
+    padding-left: 50px;
+}
+.partnerimg img:nth-child(even){
+    padding-left: 50px;
+}
+.partnerimg img:last-child{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*freedom*/
+.emtyhead{
+    flex: 0 0 100% !important;
+}
+.o-bankhead, .k-bankhead{
+    display: flex;
+    flex:0 0 50% !important;
+    flex-wrap: nowrap;}
+.freerow .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fr{
+    font-size: .875rem;
+}
+
+.acctpix, .savepix, .helppix {
+   
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    height: auto;
+}
+.managepix, .safetypix, .feepix {
+    display: flex;
+    flex: 0 0 100%;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    order:2;
+}
+.manageword, .safetyword, .feeword {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    order:1;
+}
+.manage, .safety, .feesect, .acctopen, .savesect, .helpsect{
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+}
+.apppix{
+    display: none;
+}
+.featuredcontain{
+    display: flex;
+    flex:0 0 100%;
+    flex-wrap: wrap;
+    
+}
+.kuda{
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+}
+.feature, .company, .transparency, .help{
+    flex: 0 0 50%;
+    margin-bottom: 40px;
+}
+.feature ul li, .company ul li, .transparency ul li, .help ul li{
+    margin-bottom: 10px;
+}
+.download{
+    display: flex;
+    max-width: 90%;
+}
+.download img{
+    margin-right: 01.2%;
+}
+.contactinfo .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contact{
+    flex: 0 0 100%;
+}
+.localaddr, .foreignaddr{
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: 50%;
+}
+
+}
 
 
 @media only screen and (max-width:480px) {
@@ -802,25 +1223,27 @@ ul{
 
 .c-menu{
     display: block;
+    float: right;
+    margin-left: 50%;
 }
  .c-menu .menu-icon{
     float: right;
      position: relative;
      padding:15px;
      cursor: pointer;
-     left: 220%;
+    margin-left: 70px;
      padding-top: 45px;
  }
  .c-menu .flap{
     float: right;
-    position: relative;
+    position: absolute;
     background-color: #b0e6d0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     align-content: center;
     align-items: center;
-    left:190%;
+    right: 70px;
     margin-top: 5px ;
  }
  .rect{
@@ -993,20 +1416,7 @@ ul{
     left:-3%;
     
 }/*
-.bigcircle{
-    max-width: 90%;
-    max-height: 90%;
-}
-.mediumcircle{
-   
-    max-width: 90%;
-    max-height: 90%;
-}
-.smallcircle{
-   
-    max-width: 90%;
-    max-height: 90%;
-}*/
+
 /*smallbox*/
 .box{
     max-width: 90% !important;
