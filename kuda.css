@@ -229,7 +229,7 @@ margin-left: auto;
     flex-direction: row;
 }
 .c-menu{
-    display: none;
+    display:none;
 }
 /*mainheading*/
 
@@ -1414,9 +1414,7 @@ ul{
     margin-right: auto !important;margin-top: 50px;
     top:3%;
     left:-3%;
-    
-}/*
-
+}
 /*smallbox*/
 .box{
     max-width: 90% !important;
