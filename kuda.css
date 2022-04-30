@@ -1561,8 +1561,20 @@ ul{
     padding-bottom: 50px;
     margin-bottom: 10px;
 }
+.appcont{
+    overflow: visible;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 20px;
+}
 .apppix{
     display: none;
+}
+.appword{
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    padding-right: 10px;
 }
 .featuredcontain{
     display: flex;
@@ -1602,5 +1614,247 @@ ul{
     flex: 0 0 50%;
     width: 100%;
     max-width: 50%;
+}
+
+.bigcircle{
+    position: relative;
+    width:360px;
+    height: 360px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    
+}
+.mediumcircle{
+    width:280px;
+    height: 280px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+.smallcircle{
+    width:180px;
+    height: 180px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    position: absolute;
+    left: 24%;
+    top:25%;
+}
+.sv1{
+    position: absolute;
+    top:45%;
+    left:45%;
+    animation: sv1 6s infinite linear;
+}
+.sv2{
+    position: absolute;
+    animation:  sv2 6s infinite linear;
+    top:45%;
+    left:45%;
+}
+.sv3{
+    position: absolute;
+    animation:  sv3 6s infinite linear;
+    top:45%;
+    left:45%;
+    
+}
+.sv4{
+    position: absolute;
+    animation:  sv4 6s infinite linear;
+    top:45%;
+    left:45%;
+}
+.sv5{
+    position: absolute;
+    animation:  sv5 6s infinite linear;
+    top:45%;
+    left:45%;
+}
+.kcard{
+    position: absolute;
+    left: -30%;
+    top:18%;
+    transform: rotate(-15deg);
+}
+.p-ill{
+    position: absolute;
+    top:-38%;
+    width: 280px;
+    height: 290px;
+    transform: rotate(-6deg);
+    left: -10.7%;
+}
+
+/* @keyframe */
+@keyframes sv1{
+    from{
+        transform:rotate(0deg) translateX(180px)
+    }
+    to{
+        transform:rotate(-360deg) translateX(180px)
+    }
+}
+@keyframes sv2{
+    from{
+        transform:rotate(0deg) translateX(180px)
+    }
+    to{
+        transform:rotate(360deg) translateX(180px)
+    }
+   
+}
+@keyframes sv3{
+    from{
+        transform:rotate(0deg) translateX(-180px)
+    }
+    to{
+        transform:rotate(360deg) translateX(-180px)
+    }
+}
+@keyframes sv4{
+    from{
+        transform:rotate(0deg) translateY(-140px)
+    }
+    to{
+        transform:rotate(360deg) translateY(-140px)
+    }
+}
+@keyframes sv5{
+    from{
+        transform:rotate(0deg) translateY(140px)
+    }
+    to{
+        transform:rotate(-360deg) translateY(140px)
+    }
+}
+
+
+}
+
+
+
+@media only screen and (max-width:398px){
+
+    
+.bigcircle{
+    width:300px;
+    height: 300px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    
+}
+.mediumcircle{
+    width:230px;
+    height: 230px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    position: absolute;
+    left:11%;
+    top:11.5%;
+   
+}
+.smallcircle{
+    width:150px;
+    height: 150px;
+    border: 3px solid #EFF1FF;
+    border-radius: 50%;
+    position: absolute;
+    left:24%;
+    top:25%;
+    
+}
+.sv1{
+    position: absolute;
+    left:46%;
+    top:45%;
+    animation: sv1 6s infinite linear;
+}
+.sv2{
+    position: absolute;
+    top:45%;
+    left:45%;
+    animation:  sv2 6s infinite linear;
+    
+}
+.sv3{
+    position: absolute;
+    left:45%;
+    top:45%;
+    animation:  sv3 6s infinite linear;
+    
+    
+}
+.sv4{
+    position: absolute;
+    left:45%;
+    top:45%;
+    animation:  sv4 6s infinite linear;
+   
+}
+.sv5{
+    position: absolute;
+    left:45%;
+    top:45%;
+    animation:  sv5 6s infinite linear;
+    
+}
+/* @keyframe */
+@keyframes sv1{
+    from{
+        transform:rotate(0deg) translateX(150px)
+    }
+    to{
+        transform:rotate(-360deg) translateX(150px)
+    }
+}
+@keyframes sv2{
+    from{
+        transform:rotate(0deg) translateX(150px)
+    }
+    to{
+        transform:rotate(360deg) translateX(150px)
+    }
+   
+}
+@keyframes sv3{
+    from{
+        transform:rotate(0deg) translateX(-150px)
+    }
+    to{
+        transform:rotate(360deg) translateX(-150px)
+    }
+}
+@keyframes sv4{
+    from{
+        transform:rotate(0deg) translateY(-115px)
+    }
+    to{
+        transform:rotate(360deg) translateY(-115px)
+    }
+}
+@keyframes sv5{
+    from{
+        transform:rotate(0deg) translateY(115px)
+    }
+    to{
+        transform:rotate(-360deg) translateY(115px)
+    }
+}
+.kcard{
+    position: absolute;
+    left: -18%;
+    top:28%;
+    transform: rotate(-10deg);
+    max-width: 85%;
+}
+.p-ill{
+    position: absolute;
+    top:-84%;
+    max-width: 120%;
+    transform: rotate(-4deg);
+    left: -5%;
 }
 }
