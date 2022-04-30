@@ -25,7 +25,7 @@
 body{
     padding:0;
     margin: 0;
-    border: 1px solid greenyellow;
+    
     font-family: Muli,sans-serif;
     font-size: 16px;
     color: var(--textColor);
@@ -236,6 +236,12 @@ margin-left: auto;
 .mainheading{
     margin-bottom: 40px;
 }
+.mainword .getkuda{
+    margin-left: 0 !important;
+}
+.mainword a{
+    text-decoration: none !important;
+}
 .mainword{
     display: flex;
     flex:0 0 35%;
@@ -246,7 +252,7 @@ margin-left: auto;
     flex: 0 0 50%;
     position: absolute;
     margin-left: 45%;
-    top:30%;
+   
     
 }
 .bigcircle{
@@ -264,6 +270,7 @@ margin-left: auto;
     position: absolute;
     left:11.35%;
     top:11%;
+   
 }
 .smallcircle{
     width:200px;
@@ -273,6 +280,7 @@ margin-left: auto;
     position: absolute;
     left:28%;
     top:29%;
+    
 }
 .sv1{
     position: absolute;
@@ -631,7 +639,7 @@ margin-left: auto;
     justify-content: space-between;
     padding-top: 6%;
     max-width: 1500px;
-    padding-left: 60px;
+    padding-left: 0;
     padding-right: 60px;
     margin-left: auto;
     margin-right: auto;
@@ -641,7 +649,7 @@ margin-left: auto;
     
     flex: 0 0 16.667%;
     height: 40px;
-    width:100%;
+    
 }
 /*partnership*/
 .partnership{
@@ -755,6 +763,9 @@ ul{
     flex:0 0 100%;
     
 }
+.feature ul li, .company ul li, .transparency ul li, .help ul li{
+    margin-top: 20px;
+}
 .kuda, .feature, .company, .transparency, .help{
     flex:0 0 20%;
 }
@@ -787,6 +798,10 @@ ul{
 
 
 @media only screen and (max-width:990px){
+
+
+
+
     .acctopen .container .row, .manage .container .row, .safety .container .row, .savesect .container .row,
     .helpsect .container .row, .feesect .container .row
     {
@@ -831,23 +846,35 @@ ul{
     .apppix{
         display: none;
     }
+    .mainpix{
+        top:20%;
+        margin-left: 35%;
+    }
+    .appcont .container .row{
+        display: flex;
+        flex-direction: column;
+    }
 } 
 
 
 
 @media only screen and (max-width:767px){
-        
+        .header{
+            padding-right: 40px;
+            padding-left: 40px;
+        }
 .c-menu{
-    display: block;
-    float: right;
-    margin-left: 50%;
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    position: relative;
 }
  .c-menu .menu-icon{
     float: right;
-     position: relative;
+     position: absolute;
      padding:15px;
      cursor: pointer;
-    margin-left: 70px;
+    right:0;
      padding-top: 45px;
  }
  .c-menu .flap{
@@ -859,7 +886,7 @@ ul{
     border-radius: 50%;
     align-content: center;
     align-items: center;
-    right: 70px;
+    right: 50px;
     margin-top: 5px ;
  }
  .rect{
@@ -1222,16 +1249,17 @@ ul{
  /*navbar*/
 
 .c-menu{
-    display: block;
-    float: right;
-    margin-left: 50%;
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    position: relative;
 }
  .c-menu .menu-icon{
     float: right;
-     position: relative;
+     position: absolute;
      padding:15px;
      cursor: pointer;
-    margin-left: 70px;
+    right:0;
      padding-top: 45px;
  }
  .c-menu .flap{
@@ -1243,7 +1271,7 @@ ul{
     border-radius: 50%;
     align-content: center;
     align-items: center;
-    right: 70px;
+    right: 60px;
     margin-top: 5px ;
  }
  .rect{
@@ -1556,9 +1584,11 @@ ul{
 .download{
     display: flex;
     max-width: 90%;
+    flex-wrap: wrap;
 }
 .download img{
     margin-right: 01.2%;
+    margin-top: 10px;
 }
 .contactinfo .row{
     display: flex;
